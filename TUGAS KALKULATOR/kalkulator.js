@@ -52,4 +52,3 @@ function hitung(operator) {
     hasilDiv.textContent = hasil;
     layar.textContent = hasil;
 }
-s
