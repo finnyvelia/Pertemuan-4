@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretty Pink Registration 🎀</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+            overflow-x: hidden;
+
+            background:
+                radial-gradient(circle at 10% 20%, #fff0f5 0, transparent 30%),
+                radial-gradient(circle at 90% 80%, #ffd6e7 0, transparent 30%),
+                linear-gradient(135deg, #ffe4ef, #ffc2d9, #ffeaf2);
+        }
+
+        /* Hiasan background */
+        body::before {
+            content: "♡";
+            position: fixed;
+            top: 8%;
+            left: 10%;
+            font-size: 100px;
+            color: rgba(255,255,255,0.6);
+            transform: rotate(-15deg);
+            pointer-events: none;
+        }
+
+        body::after {
+            content: "✿";
+            position: fixed;
+            bottom: 8%;
+            right: 10%;
+            font-size: 110px;
+            color: rgba(255,255,255,0.65);
+            pointer-events: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 440px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Card utama */
+        .form-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(15px);
+            padding: 40px 35px;
+            border-radius: 30px;
+            border: 2px solid white;
+
+            box-shadow:
+                0 15px 45px rgba(205, 92, 139, 0.18),
+                inset 0 0 20px rgba(255, 220, 235, 0.4);
+
+            animation: muncul 0.8s ease;
+            position: relative;
+        }
+
+        /* Hiasan pita */
+        .ribbon {
+            text-align: center;
+            font-size: 43px;
+            margin-bottom: 8px;
+            animation: goyang 2s infinite ease-in-out;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 30px;
+            color: #c44c7c;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #bd7896;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            width: 65px;
+            height: 3px;
+            background: #f3a4c3;
+            margin: 15px auto 25px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            color: #a64d74;
+            font-weight: 800;
+            font-size: 14px;
+            margin-bottom: 9px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px 17px;
+            margin-bottom: 22px;
+
+            border: 2px solid #f8d4e2;
+            border-radius: 15px;
+            background: #fff8fb;
+
+            font-family: 'Nunito', sans-serif;
+            font-size: 14px;
+            color: #9d456c;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input::placeholder {
+            color: #d6a2b8;
+        }
+
+        input:focus {
+            border-color: #e77ca7;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(231,124,167,0.12);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 15px;
+
+            background: linear-gradient(135deg, #f58bb5, #d85d91);
+            color: white;
+
+            font-family: 'Nunito', sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+
+            box-shadow: 0 7px 18px rgba(216,93,145,0.25);
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 22px rgba(216,93,145,0.35);
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
+        #message {
+            display: none;
+            margin-top: 20px;
+            padding: 14px;
+            border-radius: 13px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .error {
+            display: block !important;
+            background: #fff0f2;
+            border: 1px solid #ffc5d5;
+            color: #d34e73;
+        }
+
+        .success {
+            display: block !important;
+            background: #fce8f1;
+            border: 1px solid #f3b3cf;
+            color: #bd477a;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 12px;
+            color: #c28aa4;
+        }
+
+        .decoration {
+            text-align: center;
+            font-size: 19px;
+            margin-top: 18px;
+            letter-spacing: 7px;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes goyang {
+            0%, 100% {
+                transform: rotate(-8deg);
+            }
+            50% {
+                transform: rotate(8deg);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-card {
+                padding: 32px 23px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-card">
+
+            <div class="ribbon">🎀</div>
+
+            <h2>Pretty Registration</h2>
+
+            <p class="subtitle">
+                ♡ Welcome to our little pink world ♡
+            </p>
+
+            <div class="divider"></div>
+
+            <div id="output"></div>
+
+            <div class="decoration">
+                🌷 ✨ 🩷
+            </div>
+
+            <p class="footer">
+                Made with love ♡ just for you
+            </p>
+
+        </div>
+    </div>
+
+    <script src="script4.js"></script>
+
+</body>
+</html>

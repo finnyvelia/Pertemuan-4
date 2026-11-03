@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Diri</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image:
+                linear-gradient(rgba(50,30,60,0.2), rgba(50,30,60,0.2)),
+                url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1600");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255,255,255,0.90);
+            backdrop-filter: blur(10px);
+            width: 420px;
+            padding: 35px;
+            border-radius: 22px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .icon {
+            font-size: 45px;
+        }
+
+        h1 {
+            color: #b65f91;
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #8c7892;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            color: #805879;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #e5c5dc;
+            border-radius: 10px;
+            outline: none;
+            font-size: 14px;
+            background: #fffafd;
+        }
+
+        input:focus {
+            border-color: #c17ba2;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 25px;
+            background: linear-gradient(135deg, #df8bb4, #a77bc2);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        #error-message {
+            margin-top: 18px;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            color: #a58b9b;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="icon">🌷</div>
+            <h1>Form Data Diri</h1>
+            <p class="subtitle">
+                Silakan lengkapi data diri Anda
+            </p>
+        </div>
+
+        <div id="output"></div>
+
+        <div class="footer">
+            ♡ Personal Data Form · 2026 ♡
+        </div>
+
+    </div>
+
+    <script src="script3.js"></script>
+
+</body>
+</html>
